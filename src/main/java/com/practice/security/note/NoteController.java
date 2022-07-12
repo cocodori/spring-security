@@ -21,7 +21,7 @@ public class NoteController {
         List<Note> notes = noteService.findByUser(user);
         model.addAttribute("notes", notes);
 
-        return "note/index"
+        return "note/index";
     }
 
     @PostMapping
