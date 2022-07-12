@@ -1,0 +1,28 @@
+# logging ?? ??
+logging:
+  level:
+    root: INFO
+    sql: ERROR
+# Overloaded POST ??
+spring:
+  datasource:
+    hikari:
+      jdbc-url: jdbc:h2:mem:testdb
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+  data:
+    jpa:
+      open-in-view: true
+      hibernate:
+        ddl-auto: create
+      show-sql: true
+      properties:
+        hibernate.format_sql: true
+
+# session
+server:
+  servlet:
+    session:
+      timeout: 10m # ??? 30??? ??? 1????.
